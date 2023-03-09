@@ -1,0 +1,12 @@
+If you get a "cannot read property 'category' of undefied" error, that means React is trying to load a component that has not loaded yet. In order to make sure the component is only displayed once the data has been loaded, use the code below. Wrap the component in {} brackets. It's a sort of if statement. if data && component -> display component.
+
+[source, JavaScript]
+----
+<Grid.Column width='6'>
+    {activities[0] &&
+    <ActivityDetails activity={activities[0]}/>}
+</Grid.Column>
+----
+
+spread operator ...
+https://oprearocks.medium.com/what-do-the-three-dots-mean-in-javascript-bc5749439c9a
